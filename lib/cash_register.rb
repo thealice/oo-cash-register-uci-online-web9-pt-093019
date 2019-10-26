@@ -6,11 +6,8 @@ class CashRegister
     @discount = discount
     @total = 0
     @items = []
-    @transactions = []
   end
-  def total
-    self.total = @total
-  end
+
   def add_item(item, price, quantity = 1)
     @item = item
     @price = price#.to_f
