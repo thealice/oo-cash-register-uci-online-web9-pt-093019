@@ -27,7 +27,7 @@ class CashRegister
   end
   def void_last_transaction
     self.total -= @subtotal
-    quantity.times { @items.pop }
+    # quantity.times { @items.pop }
   end
 
 end
