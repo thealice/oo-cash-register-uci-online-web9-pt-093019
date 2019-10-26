@@ -14,7 +14,7 @@ class CashRegister
     self.quantity.times { items << item }
   end
   def apply_discount
-    discount = self.total * (self.discount / 100.00)
+    @discount = self.total * (self.discount / 100.00)
     self.total -= self.discount
     if @discount > 0
       "After the discount, the total comes to $#{@total.to_i}."
