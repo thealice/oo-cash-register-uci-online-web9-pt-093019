@@ -8,14 +8,14 @@ class CashRegister
     @total = 0
     @items = []
   end
-
+  
   def add_item(item, price, quantity=1)
     @quantity = quantity
     @subtotal = price * @quantity
     self.total += @subtotal
     self.quantity.times { items << item }
   end
-
+  
   def apply_discount
     @discount = self.total * (self.discount / 100.00)
     self.total -= self.discount
@@ -25,11 +25,11 @@ class CashRegister
       "There is no discount to apply."
     end
   end
-
+  
   # def items
   #   @items
   # end
-
+  
   def void_last_transaction
     self.total -= @subtotal
     # quantity.times { @items.pop }
