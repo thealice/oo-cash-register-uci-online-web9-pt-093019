@@ -25,11 +25,9 @@ class CashRegister
       "There is no discount to apply."
     end
   end
-  
   # def items
   #   @items
   # end
-  
   def void_last_transaction
     self.total -= @subtotal
     # quantity.times { @items.pop }
