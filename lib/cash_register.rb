@@ -8,8 +8,8 @@ class CashRegister
     @items = []
   end
   def add_item(item, price, quantity=1)
-
-    @subtotal = price * quantity
+    @quantity = quantity
+    @subtotal = price * @quantity
     @total += @subtotal
     quantity.times { items << item }
   end
