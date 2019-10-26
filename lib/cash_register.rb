@@ -1,6 +1,6 @@
 require 'pry'
 class CashRegister
-  attr_accessor :discount, :total, :item, :price, :quantity
+  attr_accessor :discount, :total, :items, :price, :quantity
 
   def initialize(discount = 0)
     @discount = discount
@@ -8,10 +8,7 @@ class CashRegister
     @items = []
   end
   def add_item(item, price, quantity=1)
-    @item = item
-    @price = price#.to_f
-    @quantity = quantity#.to_f
-    @subtotal = price * @quantity
+    @subtotal = price * quantity
     @total += @subtotal
     quantity.times { items << item }
     # @total = total.apply_discount
